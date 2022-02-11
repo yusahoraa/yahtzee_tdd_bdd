@@ -1,5 +1,9 @@
-function pointsCount1(num){
+function pointsCountOne(num){
 	return num;
 }
 
-module.exports = pointsCount1;
+function pointsCountTwo(num){
+	return num*2;
+}
+
+module.exports = {pointsCountOne, pointsCountTwo};
