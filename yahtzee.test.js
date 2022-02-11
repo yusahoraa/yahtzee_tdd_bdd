@@ -7,7 +7,7 @@ test('le retour doit être égale à la somme des dés de valeur 1', () => {
 })
 
 test('le retour doit être égale à la somme des dés de valeur 2', () => {
-    expect(pointsCount1(1)).toBe(2);
-    expect(pointsCount1(3)).toBe(6);
-    expect(pointsCount1(5)).toBe(10);
+    expect(pointsCount2(1)).toBe(2);
+    expect(pointsCount2(3)).toBe(6);
+    expect(pointsCount2(5)).toBe(10);
 })
