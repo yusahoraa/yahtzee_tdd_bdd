@@ -1,8 +1,8 @@
 
 function pointsCount(dices, type){
 
-	var points;
-	var count;
+	var points = 0;
+	var count = 0;
 
 	switch (type) {
 		case 1:
@@ -89,6 +89,11 @@ function pointsCount(dices, type){
 			if(fullTwo !== 0 && fullThree !== 0){
 				points = 25;
 			}
+			break;
+		case 'Chance':
+			dices.forEach(element => {
+				points += element;
+			});
 			break;
 		default:
 			return 0;
