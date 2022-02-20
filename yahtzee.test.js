@@ -54,3 +54,9 @@ test('le retour doit être égale à 50', () => {
     expect(yahtzee.pointsCount([6,6,6,6,6], 'Quinte')).toBe(50);
     expect(yahtzee.pointsCount([5,5,5,5,5], 'Quinte')).toBe(50);
 });
+
+test('le retour doit être égale à 30', () => {
+    expect(yahtzee.pointsCount([1,1,2,3,4], 'Petite suite')).toBe(30);
+    expect(yahtzee.pointsCount([2,2,3,4,5], 'Petite suite')).toBe(30);
+    expect(yahtzee.pointsCount([3,4,5,6,6], 'Petite suite')).toBe(30);
+});
