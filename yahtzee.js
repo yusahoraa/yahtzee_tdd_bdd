@@ -30,4 +30,24 @@ function pointsCountBrelan(dices){
 	return points;
 }
 
-module.exports = {pointsCountBase, pointsCountBrelan};
+function pointsCountCarre(dices){
+
+	var count;
+	var points;
+
+	for(var i=1; i <= 6; i++){
+		count = 0;
+		dices.forEach(element => {
+			if(element === i){
+				count ++;
+				if(count === 4){
+					points = count*i;
+				}
+			}
+		});
+	}
+
+	return points;
+}
+
+module.exports = {pointsCountBase, pointsCountBrelan, pointsCountCarre};
