@@ -1,21 +1,13 @@
-function pointsCountOne(dices){
 
-	var points = dices.reduce(function(n, val) {
-		return n + (val === 1);
-	}, 0);
-
-	return points;
-}
-
-function pointsCountTwo(dices){
+function pointsCountBase(dices, num){
 
 	var count = dices.reduce(function(n, val) {
-		return n + (val === 2);
+		return n + (val === num);
 	}, 0);
 
-	var points = count*2;
+	var points = count*num;
 
 	return points;
 }
 
-module.exports = {pointsCountOne, pointsCountTwo};
+module.exports = {pointsCountBase};
