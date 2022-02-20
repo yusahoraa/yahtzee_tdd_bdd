@@ -44,9 +44,6 @@ function pointsCount(dices, type){
 			}
 			break;
 		case 'Quinte':
-			var count;
-			var points;
-		
 			for(var i=1; i <= 6; i++){
 				count = 0;
 				dices.forEach(element => {
@@ -58,9 +55,14 @@ function pointsCount(dices, type){
 					}
 				});
 			}
-		  break;
+		  	break;
+		case 'Petite suite':
+			if((dices.includes(1) && dices.includes(2) && dices.includes(3) && dices.includes(4)) || (dices.includes(2) && dices.includes(3) && dices.includes(4) && dices.includes(5)) || (dices.includes(3) && dices.includes(4) && dices.includes(5) && dices.includes(6))){
+				points = 30;
+			}
+			break;
 		default:
-		  console.log(`Sorry, we are out of ${expr}.`);
+			return 0;
 	  }
 
 	return points;
