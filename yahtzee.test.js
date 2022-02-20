@@ -14,7 +14,7 @@ test('le retour doit être égale à la somme des dés de valeur 2', () => {
 });
 
 test('le retour doit être égale à la somme des dés de valeur 3', () => {
-    expect(yahtzee.pointsCountThree([1,3,3,5,2])).toBe(3);
-    expect(yahtzee.pointsCountThree([2,2,2,6,3])).toBe(9);
-    expect(yahtzee.pointsCountThree([2,2,2,2,2])).toBe(15);
+    expect(yahtzee.pointsCountThree([1,3,2,5,2])).toBe(3);
+    expect(yahtzee.pointsCountThree([2,3,3,6,3])).toBe(9);
+    expect(yahtzee.pointsCountThree([3,3,3,3,3])).toBe(15);
 });
