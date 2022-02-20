@@ -66,6 +66,30 @@ function pointsCount(dices, type){
 				points = 40;
 			}
 			break;
+		case 'Full':
+			var fullTwo = 0;
+			var fullThree = 0;
+			for(var i=1; i <= 6; i++){
+				count = 0;
+				dices.forEach(element => {
+					if(element === i){
+						count ++;
+					}
+				});
+
+				if(count === 2){
+					fullTwo ++;
+				}
+
+				else if(count === 3){
+					fullThree ++;
+				}
+			}
+
+			if(fullTwo !== 0 && fullThree !== 0){
+				points = 25;
+			}
+			break;
 		default:
 			return 0;
 	  }
