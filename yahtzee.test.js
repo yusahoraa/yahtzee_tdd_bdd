@@ -6,3 +6,9 @@ test('le retour doit être égale à la somme des dés de valeur 1', () => {
     expect(yahtzee.pointsCountOne([1,1,1,6,3])).toBe(3);
     expect(yahtzee.pointsCountOne([1,1,1,1,1])).toBe(5);
 });
+
+test('le retour doit être égale à la somme des dés de valeur 2', () => {
+    expect(yahtzee.pointsCountOne([1,3,3,5,2])).toBe(2);
+    expect(yahtzee.pointsCountOne([2,2,2,6,3])).toBe(6);
+    expect(yahtzee.pointsCountOne([2,2,2,2,2])).toBe(10);
+});
