@@ -61,6 +61,11 @@ function pointsCount(dices, type){
 				points = 30;
 			}
 			break;
+		case 'Grande suite':
+			if((dices.includes(1) && dices.includes(2) && dices.includes(3) && dices.includes(4) && dices.includes(5)) || (dices.includes(2) && dices.includes(3) && dices.includes(4) && dices.includes(5) && dices.includes(6))){
+				points = 40;
+			}
+			break;
 		default:
 			return 0;
 	  }
