@@ -7,4 +7,15 @@ function pointsCountOne(dices){
 	return points;
 }
 
-module.exports = {pointsCountOne};
+function pointsCountTwo(dices){
+
+	var count = dices.reduce(function(n, val) {
+		return n + (val === 2);
+	}, 0);
+
+	var points = count*2;
+
+	return points;
+}
+
+module.exports = {pointsCountOne, pointsCountTwo};
