@@ -42,3 +42,9 @@ test('le retour doit être égale à la somme des dés du brelan', () => {
     expect(yahtzee.pointsCountBrelan([2,6,6,6,3])).toBe(18);
     expect(yahtzee.pointsCountBrelan([5,5,5,5,5])).toBe(15);
 });
+
+test('le retour doit être égale à la somme des dés du carré', () => {
+    expect(yahtzee.pointsCountCarré([1,2,2,2,2])).toBe(8);
+    expect(yahtzee.pointsCountCarré([2,6,6,6,6])).toBe(24);
+    expect(yahtzee.pointsCountCarré([5,5,5,5,5])).toBe(20);
+});
